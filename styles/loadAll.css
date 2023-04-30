@@ -1,0 +1,44 @@
+:root {
+    --dark-bg-: #444444;
+}
+
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cardAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 2rem 2rem;
+}
+
+.cardAll__cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardAll__img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.cardAll__title{
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
+.cardAll__stats {
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);   
+}
+
+.cardAll__stat{
+    text-align: center;
+    font-size: 1.6rem;
+}

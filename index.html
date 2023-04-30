@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Pokeapi Project</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    
+
+    <header class="header">
+        <nav class="navbar">
+            <picture class="logo-container">
+                <a href="#" class="nav__link">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </picture>
+
+            <ul class="nav-items">
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/loadAll.html">Cargar Todos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <h1 class="container-title">PokeApi Project</h1>
+        <form action="scripts/main.js" id="formulario">
+            
+            <input type="text" name="nombre" id="text-input" list="options" placeholder="Ingrese un pokemon...">
+            <datalist id="options">
+            <!-- <option value="ditto">-->
+            </datalist>
+            <button type="submit" id="btn-submit" >
+                <img src="img/search-rounded.svg" class="search__icon" alt="">
+            </button>
+        </form>
+
+        <section class="card-container container">
+            <!--
+            <picture class="card__cover">
+                <img src="" alt="" class="card__cover-img">
+            </picture>
+            <article class="card__body">
+                <h4 class="card__title">Ditto</h4>
+                <ul class="card__stats">
+                    <li class="stats__item">
+                        <p class="stat__name">HP</p>
+                        <p class="stat__desc"></p>
+                    </li>
+                    <li class="stats__item">
+                        <p class="stat__name">ATTACK</p>
+                        <p class="stat__desc"></p>
+                    </li>
+                    <li class="stats__item">
+                        <p class="stat__name">DEFENSE</p>
+                        <p class="stat__desc"></p>
+                    </li>
+                    <li class="stats__item">
+                        <p class="stat__name">SPECIAL ATTACK</p>
+                        <p class="stat__desc"></p>
+                    </li>
+                    <li class="stats__item">
+                        <p class="stat__name">SPECIAL DEFFENSE</p>
+                        <p class="stat__desc"></p>
+                    </li>
+                    <li class="stats__item">
+                        <p class="stat__name">SPEED</p>
+                        <p class="stat__desc"></p>
+                    </li>
+                </ul>
+            </article>
+            -->
+        </section>
+        
+    <script src="scripts/main.js"></script>
+</body>
+</html>
