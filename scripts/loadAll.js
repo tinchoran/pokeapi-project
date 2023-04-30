@@ -28,7 +28,6 @@ const createElement = (direcc)=>{
                 </div>
             </article>`
         )
-        console.log(data)
     })
     .catch(err => console.error(err))
 
