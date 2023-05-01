@@ -74,29 +74,5 @@ html{
     background-color: black;
 }
 
-/*Direccionador*/
 
-.direccionador{
-    background-color: green;
-    display: inline-block;
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 12rem;
-    right: 5rem;
-    transition: .4s;
-}
-
-.direccionador:hover{
-    background-color: black;
-}
-
-.direccionador img{
-    width: 4rem;
-    filter: invert(.9);
-}
 

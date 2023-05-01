@@ -34,7 +34,7 @@ const createElement = (direcc)=>{
 
 }
 
-const pedidoInicial = async (pag)=>{
+const pedirDatos = async (pag)=>{
     let urlDir = `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${pag * 20}`
     let res = await fetch(urlDir).then(response => response.json()).then(data => {let datos = [];data.results.forEach(el => datos.push(el.url));return datos}).catch(error => console.log(error))
     let crear;
@@ -50,16 +50,16 @@ buttons.forEach(el => {
         if(e.target.id === "btnSiguiente" && pagina < 51){
             grilla.innerHTML = "";
             pagina += 1;
-            pedidoInicial(pagina)
+            pedirDatos(pagina)
             return pagina
         }else if(e.target.id === "btnAnterior" && pagina>1){
             grilla.innerHTML = "";
             pagina -= 1
-            pedidoInicial(pagina)
+            pedirDatos(pagina)
             return pagina
         }
     })
 })
 
 //Hacer el pedido inicial de los 20 primeros elementos
-pedidoInicial(0)
+pedirDatos(0)
