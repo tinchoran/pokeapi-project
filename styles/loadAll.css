@@ -2,9 +2,13 @@
     --dark-bg-: #444444;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .grilla{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .cardAll{
@@ -42,3 +46,57 @@
     text-align: center;
     font-size: 1.6rem;
 }
+
+
+/*PAGINACIÓN*/
+.paginacion{
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn{
+    color: white;
+    border-radius: 29px;
+    padding: 1.5rem 4rem;
+    font-size: 1.8rem;
+    border: none;
+    font-weight: 500;
+    background-color: green;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn:hover{
+    background-color: black;
+}
+
+/*Direccionador*/
+
+.direccionador{
+    background-color: green;
+    display: inline-block;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12rem;
+    right: 5rem;
+    transition: .4s;
+}
+
+.direccionador:hover{
+    background-color: black;
+}
+
+.direccionador img{
+    width: 4rem;
+    filter: invert(.9);
+}
+

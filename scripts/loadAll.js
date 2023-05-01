@@ -1,12 +1,13 @@
-const baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=10000";
-let direcciones = new Array()
-
+const baseUrl = "https://pokeapi.co/api/v2/ability/?limit=20&offset=20";
+let pagina = 1;
+const buttons = document.querySelectorAll(".btn")
+const grilla = document.querySelector(".grilla");
 
 const createElement = (direcc)=>{
     return fetch(direcc)
     .then(response => response.json())
     .then(data => {
-        document.querySelector(".grilla").insertAdjacentHTML("beforeend", `
+        grilla.insertAdjacentHTML("beforeend", `
         <article class="cardAll">
                 <picture class="cardAll__cover">
                     <img src="${data.sprites.front_default}" alt="" class="cardAll__img" loading="lazy">
@@ -33,11 +34,32 @@ const createElement = (direcc)=>{
 
 }
 
-const pedidoInicial = async ()=>{
-    let res = await fetch(baseUrl).then(response => response.json()).then(data => {let datos = [];data.results.forEach(el => datos.push(el.url));return datos}).catch(error => console.log(error))
+const pedidoInicial = async (pag)=>{
+    let urlDir = `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${pag * 20}`
+    let res = await fetch(urlDir).then(response => response.json()).then(data => {let datos = [];data.results.forEach(el => datos.push(el.url));return datos}).catch(error => console.log(error))
     let crear;
     for(let el of res){
         crear = await createElement(el)
     }
 }
-pedidoInicial()
+
+
+
+buttons.forEach(el => {
+    el.addEventListener("click", (e)=>{
+        if(e.target.id === "btnSiguiente" && pagina < 51){
+            grilla.innerHTML = "";
+            pagina += 1;
+            pedidoInicial(pagina)
+            return pagina
+        }else if(e.target.id === "btnAnterior" && pagina>1){
+            grilla.innerHTML = "";
+            pagina -= 1
+            pedidoInicial(pagina)
+            return pagina
+        }
+    })
+})
+
+//Hacer el pedido inicial de los 20 primeros elementos
+pedidoInicial(0)
