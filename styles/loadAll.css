@@ -9,14 +9,20 @@ html{
 .grilla{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(34, 30, 30);
+    padding: 2px;
+    gap: 2px;
+    border-radius: 30px;
 }
 
 .cardAll{
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    gap: 2rem;
     padding: 2rem 2rem;
+    background-color: var(--dark-bg-);
 }
 
 .cardAll__cover {
@@ -38,11 +44,14 @@ html{
 .cardAll__stats {
     text-transform: uppercase;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    justify-content:center;
+    row-gap: 1rem;
     grid-template-rows: repeat(3, 1fr);   
 }
 
 .cardAll__stat{
+    text-shadow: 1px 1px 5px black;
     text-align: center;
     font-size: 1.6rem;
 }

@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -93,7 +93,7 @@ a{
     position: absolute;
     bottom: -.8rem;
     height: 2px;
-    background-color: red;
+    background-color: rgb(37, 196, 37);
     clip-path: inset(0% 100% 0 0%);
     transition: .3s;
     
